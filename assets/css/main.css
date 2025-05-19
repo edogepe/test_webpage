@@ -1,0 +1,576 @@
+/*
+  Aerial Theme CSS (Modificado)
+  Comentado profesionalmente para claridad estructural.
+*/
+
+/* -------------------------------------------------------------------------- */
+/* Reset general y configuración de tipografía base */
+/* -------------------------------------------------------------------------- */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-x: hidden; /* previene scroll horizontal inesperado */
+	scroll-behavior: smooth;
+  }
+  
+  html {
+	box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
+  
+  body {
+	background: #1b3c2f url("images/bg.webp") center center no-repeat;
+	background-size: cover;
+	color: #fff;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5em;
+	-webkit-text-size-adjust: none;
+  }
+  
+  input, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+  }
+  
+  /* -------------------------------------------------------------------------- */
+  /* Enlaces y elementos tipográficos */
+  /* -------------------------------------------------------------------------- */
+  a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 0.5px linen rgba(255, 255, 255, 0.5);
+	outline: 0;
+	transition: border-bottom-color 0.2s ease-in-out;
+  }
+  
+  a:hover {
+	border-bottom-color: transparent;
+	text-decoration: underline;
+  }
+  
+  strong, b { font-weight: 400; }
+  em, i { font-style: italic; }
+  p { margin: 0 0 1.65em 0; }
+  
+  h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	font-weight: 300;
+	line-height: 1.5em;
+	margin: 0 0 1em 0;
+  }
+  
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	text-decoration: none;
+	border-bottom: none;
+  }
+  
+  h1 { font-size: 3.5em; line-height: 1.2em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.5em; }
+  h4 { font-size: 1.25em; }
+  h5 { font-size: 1.1em; }
+  h6 { font-size: 0.9em; }
+  
+  sub { position: relative; top: 0.5em; font-size: 0.8em; }
+  sup { position: relative; top: -0.5em; font-size: 0.8em; }
+  
+  blockquote {
+	border-left: solid 0.5em rgba(255, 255, 255, 0.25);
+	padding: 1em 0 1em 1.5em;
+	font-style: italic;
+  }
+  
+  code {
+	background: rgba(255, 255, 255, 0.125);
+	border-radius: 0.25em;
+	font-family: "Courier New", monospace;
+	font-size: 0.9em;
+	padding: 0.25em 0.65em;
+  }
+  
+  pre code {
+	display: block;
+	padding: 1em 1.5em;
+	overflow-x: auto;
+  }
+  
+  hr {
+	border: 0;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.25);
+	margin: 1.65em 0;
+  }
+  
+  .align-left { text-align: left; }
+  .align-center { text-align: center; }
+  .align-right { text-align: right; }
+  
+  /* -------------------------------------------------------------------------- */
+  /* Estructura principal y secciones */
+  /* -------------------------------------------------------------------------- */
+  
+  #wrapper {
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	opacity: 1;
+  }
+  
+  #main {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+	scroll-behavior: smooth;
+  }
+  
+  #main section {
+	scroll-snap-align: start;
+	min-height: 100vh;
+	padding: 4em 2em;
+	margin: 0 auto;
+	box-sizing: border-box;
+  }
+  
+  #main section:not(#landing) {
+	margin: auto;
+	max-width: 1100px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 1px;
+	text-align: justify;
+	line-height: 2em;
+  }
+  
+  /* -------------------------------------------------------------------------- */
+  /* Sección de inicio (Landing Page) */
+  /* -------------------------------------------------------------------------- */
+  
+  #landing {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: transparent;
+	backdrop-filter: none;
+	box-shadow: none;
+	padding: 0 2em;
+  }
+  
+  #landing #header {
+	background: none;
+	box-shadow: none;
+	max-width: none;
+  }
+  
+  #landing h1 {
+	font-size: 3.8em;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+	margin-bottom: 0.5em;
+  }
+  
+  #landing p {
+	color: #ddd;
+	font-size: 1.3em;
+  }
+  
+  /* -------------------------------------------------------------------------- */
+  /* Encabezado global reutilizable */
+  /* -------------------------------------------------------------------------- */
+  
+  #header {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 0em;
+  }
+  
+  #header h1 {
+	font-size: 4em;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  #header p {
+	font-size: 1.25em;
+	color: #eee;
+	margin: 0;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+  
+  #header nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 1.5em 0 0 0;
+  }
+  
+  #header nav ul li {
+	display: inline-block;
+	padding: 0 0.75em;
+  }
+  
+  /* -------------------------------------------------------------------------- */
+  /* Barra de navegación fija superior */
+  /* -------------------------------------------------------------------------- */
+  
+  #top-title-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.448);
+	color: #fff;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-align: center;
+	padding: 0.5em 1em;
+	z-index: 1000;
+	backdrop-filter: blur(6px);
+	text-transform: uppercase;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  #top-title-bar nav ul {
+	display: flex;
+	gap: 1em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  #top-title-bar a {
+	color: white;
+	text-decoration: none;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	padding: 0 1em;
+	transition: opacity 0.4s;
+  }
+  
+  #top-title-bar a:hover {
+	opacity: 1;
+  }
+  
+  #top-title-bar a.active {
+	border-bottom: 2px solid #0ac257;
+	font-weight: bold;
+  }
+  
+  #top-title-bar nav {
+	position: relative;
+  }
+  
+  .active-indicator {
+	position: absolute;
+	bottom: 0;
+	height: 1px;
+	background: #ffffff;
+	width: 0;
+	transition: all 0.3s ease;
+	transform: translateX(0);
+  }
+  
+  #top-title-bar nav a {
+	position: relative;
+	color: rgba(255, 255, 255, 0.374);
+	transition: color 0.3s ease;
+  }
+  
+  
+  #top-title-bar nav a.active::after {
+	width: 100%;
+  }
+
+  #top-title-bar nav a:hover {
+	color: rgb(255, 255, 255); /* color en hover */
+}
+#top-title-bar nav a.active {
+	color: white; /* color activo */
+	font-weight: bold;
+	border-bottom: 1.5px solid #ffffff76;
+}
+
+  /* -------------------------------------------------------------------------- */
+  /* Footer global fijo */
+  /* -------------------------------------------------------------------------- */
+  
+  #footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3em;
+	line-height: 3em;
+	background: rgba(0, 0, 0, 0.6);
+	font-size: 0.7em;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+	font-family: 'Inter', 'Source Sans Pro', sans-serif;
+	letter-spacing: 1px;
+  }
+  
+  /* -------------------------------------------------------------------------- */
+  /* Componentes personalizados (perfiles, formularios, animaciones) */
+  /* -------------------------------------------------------------------------- */
+  
+  .profile-box {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	margin-top: 2em;
+	flex-wrap: wrap;
+  }
+  
+  .profile-img {
+	width: 150;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border: 3px solid white;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-img:hover {
+	transform: scale(1.15);
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.544);
+  }
+  
+  .profile-text {
+	flex: 1;
+	min-width: 200px;
+	color: #eee;
+  }
+  
+  .linkedin-link {
+	color: #78abdf;
+	font-weight: bold;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	transition: opacity 0.7s ease;
+  }
+  
+  .linkedin-link:hover {
+	opacity: 0.4;
+  }
+  
+  .linkedin-icon {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+  }
+  
+  .fade-in {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+	opacity: 1;
+	transform: none;
+  }
+  
+  .contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	max-width: 500px;
+	width: 100%;
+	margin: 1em auto;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 0.5em;
+	border-radius: 0px;
+  }
+  
+  .contact-form label {
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 1em;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+	padding: 0.8em;
+	border: none;
+	border-radius: 1px;
+	font-size: 1em;
+	width: 100%;
+	box-sizing: border-box;
+  }
+  
+  .contact-form button {
+	padding: 0.8em 1.5em;
+	border: none;
+	border-radius: 4px;
+	background-color: #0a66c2;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+	background-color: #004a99;
+  }
+  
+  .email-link {
+	color: #94b9eb;
+	text-decoration: underline;
+	font-weight: bold;
+  }
+  
+  .email-link:hover {
+	opacity: 0.6;
+  }
+  
+  /* -------------------------------------------------------------------------- */
+  /* Texto desplazable estilo "marquee" horizontal profesional */
+  /* -------------------------------------------------------------------------- */
+  
+  .scrolling-text-wrapper {
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	background: transparent;
+	color: #ddd;
+	font-size: 1em;
+	font-weight: 300;
+	text-align: center;
+  }
+  
+  .scrolling-text-container {
+	max-width: 750px;
+	margin: 0 auto;
+	overflow: hidden;
+  }
+  
+  .scrolling-text {
+	display: inline-block;
+	padding-left: 100%;
+	animation: scroll-left 55s linear infinite;
+	white-space: nowrap;
+	font-size: 1.6em;
+	font-weight: 400;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	color: #ffffffea;
+	letter-spacing: 5px;
+	text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+  
+  @keyframes scroll-left {
+	0% { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+  }
+  
+  .scrolling-text:hover {
+	animation-play-state: paused;
+  }
+  
+  /* -------------------------------------------------------------------------- */
+  /* Ajuste extra de altura para compatibilidad */
+  /* -------------------------------------------------------------------------- */
+  html, body {
+	height: 100%;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+  }
+  
+  .background-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.2); /* negro con 50% opacidad */
+	z-index: 0;
+	pointer-events: none;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("images/bg.webp") center center no-repeat;
+	background-size: cover;
+	filter: brightness(0.8) saturate(1.2) contrast(1.5) blur(0px);
+	z-index: 0;
+	pointer-events: none;
+}
+
+.scroll-container {
+	height: 100vh;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+	padding-right: 10px; /* espacio para no cortar la barra */
+  }
+  
+  /* Personaliza scroll solo en navegadores basados en WebKit (Chrome, Edge, Safari) */
+  .scroll-container::-webkit-scrollbar {
+	width: 6px; /* ancho del scroll */
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+	background: transparent;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.3); /* color claro, sutil */
+	border-radius: 3px;
+  }
+  
+  /* Firefox */
+  .scroll-container {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  }
+  
+  .centered-img {
+	display: block;
+	margin: 0 auto 1.5em auto;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border: 3px solid white;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .linkedin-container {
+	text-align: center;
+	margin-top: 1.5em;
+  }
+  
+  .linkedin-link {
+	color: #78abdf;
+	font-weight: bold;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	transition: opacity 0.7s ease;
+  }
+  
+  .linkedin-link:hover {
+	opacity: 0.4;
+  }
+  
+  .linkedin-icon {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+  }
+  

@@ -1,1 +1,409 @@
-<h1>Github prueba Eduardo</h1>
+<!DOCTYPE HTML>
+
+<!-- Plantilla 'Aerial' de HTML5 UP, gratuita para uso personal y comercial -->
+
+<html>
+
+<head>
+	<!-- Título que aparece en la pestaña del navegador -->
+	<title>Home - EGALLARDO</title>
+
+<!-- Configuración de codificación y responsive design -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<!-- Hoja de estilos principal -->
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<!-- Estilo alternativo si JS está deshabilitado -->
+<noscript>
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+</noscript>
+
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+	integrity="sha512-o+lVYrDqRb+Er1jMBj9ewPPvG8Ik2TPcM1J9XcRkZ3M0wMfBNciBznS3ikS0Kchz1zWIf7X2aFmpHl5cuG6X8Q=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+/>
+
+
+</head>
+
+
+
+<body class="is-preload"> <!-- Clase usada para transición al cargar -->
+	<div id="top-title-bar" style="display: flex; justify-content: space-between; align-items: center; padding: 0.5em 1em;">
+		<span>egallardo</span>
+		<nav>
+			<div class="active-indicator"></div> <!-- barra deslizante -->
+			<ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 0em;">
+				<li><a href="#landing">Inicio</a></li>
+				<li><a href="#presentation">Acerca de</a></li>
+				<li><a href="#portfolio">Portafolio</a></li>
+				<li><a href="#contact">Contacto</a></li>				
+			</ul>
+			
+		</nav>
+		
+	</div>
+	
+	
+	<div id="wrapper"> <!-- Contenedor general del sitio -->
+
+		<div id="bg"></div> <!-- Fondo animado o estático -->
+
+		<div id="overlay"></div> <!-- Capa semitransparente sobre el fondo -->
+
+		<div class="scroll-container">
+		<div id="main"> <!-- Contenido principal visible -->
+			<section id="landing">
+			<!-- Header con título, descripción y redes sociales -->
+			<header id="header">
+				<div class="scrolling-text-container">
+					<div class="scrolling-text">
+					  Automatizaciones • Sensores remotos • Cartografía inteligente • Gráficos y tablas • Estadística •
+					  Automatizaciones • Sensores remotos • Cartografía inteligente • Gráficos y tablas • Estadística •
+					</div>
+				  </div>
+				  
+				  
+				<h1>Innovación Geoespacial al Servicio del Medio Ambiente.</h1> <!-- Nombre principal o título -->
+			</header>
+		</section>
+
+		<section id="presentation">
+			<h2 data-i18n="presentation_title">Acerca de mí</h2>
+		  
+			<div class="profile-box fade-in">
+			  <div class="profile-text">
+				<img src="assets/css/images/me.jpg" alt="Eduardo Gallardo" class="profile-img centered-img">
+		  
+				<p data-i18n="presentation_text">
+					¡Hola! Soy Eduardo,</p>
+				<p data-i18n="presentation_text">
+					Geógrafo U. de Chile, con un diploma en Geomática y otro (en curso) en Estadística UC, me muevo donde se 
+					cruzan mapas, algoritmos y biodiversidad. Tomo datos geográficos de toda 
+					índole —fauna y flora, lluvias y vientos, caudales y napas, incendios y cicatrices térmicas, suelos, 
+					glaciares, datos de sensores remotos, hasta información sociodemográfica— y los convierto en <em>insight</em> 
+					accionable para consultoría ambiental.
+					<p data-i18n="presentation_text">
+						Cada visualización, modelo o reporte que entrego pasa por pruebas de robustez 
+						y validaciones estadísticas; aquí no hay conjeturas al azar ni fórmulas copiadas 
+						al tuntún. Si un número aparece en pantalla, es porque sobrevivió a una buena discusión
+						 metodológica que lo hizo estar ahí y será debidamente abordado metodológicamente.</p>
+					<p data-i18n="presentation_text">Explora mi portafolio y agendemos tu próximo proyecto: pongamos tus datos a trabajar y entreguemos resultados medibles, no solo buenas ideas.</p>
+			  </div>
+			  
+			</div>
+		  
+			<div class="linkedin-container fade-in">
+			  <a href="https://www.linkedin.com/in/eduardojgp/" target="_blank" class="linkedin-link">
+				<img src="assets/css/images/LinkedIn_icon.svg.png" alt="LinkedIn" class="linkedin-icon" />
+				LinkedIn
+			  </a>
+			</div>
+		  </section>
+		  
+			
+			
+			<!-- PORTAFOLIO: GRID CON MODAL LIGHTBOX -->
+			<section id="portfolio">
+				<h2>Portafolio</h2>
+				<p>Aquí hay una muestra de mis trabajos. Haz clic para verlos en detalle.</p>
+			
+				<div class="portfolio-grid">
+				<!-- Tarjeta 1 -->
+				<div class="portfolio-item" data-modal="modal1">
+					<img src="assets/images/proyecto1-thumb.jpg" alt="Proyecto 1">
+					<h3>Nombre del Proyecto</h3>
+				</div>
+			
+				<!-- Tarjeta 2 -->
+				<div class="portfolio-item" data-modal="modal2">
+					<img src="assets/images/proyecto2-thumb.jpg" alt="Proyecto 2">
+					<h3>Nombre del Proyecto</h3>
+				</div>
+				</div>
+			
+				<!-- MODALES (detalles ampliados) -->
+				<div id="modal1" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Nombre del Proyecto 1</h2>
+					<img src="assets/images/proyecto1-full.jpg" alt="Proyecto 1 completo">
+					<p>Descripción detallada del proyecto, herramientas utilizadas, objetivos, etc.</p>
+					<a href="#" target="_blank">Ver repositorio</a>
+				</div>
+				</div>
+			
+				<div id="modal2" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Nombre del Proyecto 2</h2>
+					<video controls src="assets/videos/proyecto2.mp4"></video>
+					<p>Explicación de este otro trabajo con video embebido.</p>
+				</div>
+				</div>
+			</section>
+			
+			<!-- ESTILOS -->
+			<style>
+				.portfolio-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2em;
+				margin-top: 2em;
+				}
+			
+				.portfolio-item {
+				background: rgba(255,255,255,0.05);
+				padding: 1em;
+				border-radius: 8px;
+				text-align: center;
+				cursor: pointer;
+				transition: transform 0.2s ease;
+				}
+				.portfolio-item:hover {
+				transform: scale(1.02);
+				}
+				.portfolio-item img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 4px;
+				}
+				.portfolio-item h3 {
+				margin-top: 0.5em;
+				color: white;
+				}
+			
+				.modal {
+				display: none;
+				position: fixed;
+				z-index: 2000;
+				padding-top: 5vh;
+				left: 0;
+				top: 0;
+				width: 100vw;
+				height: 100vh;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.85);
+				}
+				.modal-content {
+				background-color: #111;
+				margin: auto;
+				padding: 2em;
+				border: 1px solid #888;
+				max-width: 800px;
+				border-radius: 10px;
+				color: white;
+				}
+				.modal-content img,
+				.modal-content video {
+				width: 100%;
+				margin-bottom: 1em;
+				border-radius: 6px;
+				}
+				.modal-content a {
+				color: #0a66c2;
+				text-decoration: underline;
+				}
+				.close {
+				color: white;
+				float: right;
+				font-size: 1.5em;
+				cursor: pointer;
+				}
+			</style>
+			
+			<!-- JS para abrir y cerrar modales -->
+			<script>
+				document.querySelectorAll('.portfolio-item').forEach(item => {
+				item.addEventListener('click', () => {
+					const modal = document.getElementById(item.dataset.modal);
+					modal.style.display = 'block';
+				});
+				});
+			
+				document.querySelectorAll('.close').forEach(close => {
+				close.addEventListener('click', () => {
+					close.closest('.modal').style.display = 'none';
+				});
+				});
+			
+				window.addEventListener('click', (e) => {
+				if (e.target.classList.contains('modal')) {
+					e.target.style.display = 'none';
+				}
+				});
+			</script>
+
+  
+			<!-- Sección de contacto -->
+			<section id="contact">
+				<h2>Contacto</h2>
+				<p>
+					Si deseas ponerte en contacto, puedes enviar un correo a 
+					<a href="mailto:eduardo@egallardo.cl" class="email-link">eduardo@egallardo.cl</a>
+					o completar el siguiente formulario. Responderé en horario hábil.
+				  </p>
+								
+				<form id="contact-form" class="contact-form">
+				<div class="form-group">
+					<label for="name">Nombre</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email">Correo</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Mensaje</label>
+					<textarea id="message" name="message" rows="5" required></textarea>
+				</div>
+
+				<button type="submit">Enviar</button>
+				</form>
+
+				<!-- Contenedor para el mensaje de éxito -->
+				<div id="success-message" style="display: none; margin-top: 1em; color: green;">
+				¡Gracias por tu mensaje! Te responderé pronto.
+				</div>
+
+			  </section>
+			  
+
+			<!-- Pie de página con créditos -->
+			<footer id="footer">
+				<span class="copyright">
+					&copy; 2025 · Eduardo Gallardo · Santiago de Chile
+				</span>
+			</footer>
+
+		</div>
+		</div>
+	</div>
+
+	<!-- Scripts para animación inicial y control táctil -->
+	<script>
+		// Remueve clase de precarga una vez cargado
+		window.onload = function() { document.body.classList.remove('is-preload'); }
+
+		// Previene scroll táctil en móviles
+		window.ontouchmove = function() { return false; }
+
+		// En móviles, resetea scroll al cambiar orientación
+		window.onorientationchange = function() { document.body.scrollTop = 0; }
+	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const elements = document.querySelectorAll(".fade-in");
+	
+			const observer = new IntersectionObserver(entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("visible");
+					} else {
+						entry.target.classList.remove("visible");
+					}
+				});
+			});
+	
+			elements.forEach(el => observer.observe(el));
+		});
+	</script>
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		  const sections = document.querySelectorAll("section");
+		  const navLinks = document.querySelectorAll("#top-title-bar nav a");
+	  
+		  const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+			  if (entry.isIntersecting) {
+				const id = entry.target.id;
+				navLinks.forEach(link => {
+				  link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+				});
+			  }
+			});
+		  }, {
+			threshold: 0.6 // más o menos 60% visible
+		  });
+	  
+		  sections.forEach(section => observer.observe(section));
+		});
+	  </script>
+
+	  <script>
+		document.addEventListener("DOMContentLoaded", () => {
+		  const sections = document.querySelectorAll("section");
+		  const navLinks = document.querySelectorAll("#top-title-bar nav a");
+		  const indicator = document.querySelector(".active-indicator");
+	  
+		  const updateIndicator = (activeLink) => {
+			const rect = activeLink.getBoundingClientRect();
+			const navRect = activeLink.closest("nav").getBoundingClientRect();
+			indicator.style.width = `${rect.width}px`;
+			indicator.style.transform = `translateX(${rect.left - navRect.left}px)`;
+		  };
+	  
+		  const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+			  if (entry.isIntersecting) {
+				const id = entry.target.id;
+				navLinks.forEach(link => {
+				  const isActive = link.getAttribute("href") === `#${id}`;
+				  link.classList.toggle("active", isActive);
+				  if (isActive) updateIndicator(link);
+				});
+			  }
+			});
+		  }, { threshold: 0.6 });
+	  
+		  sections.forEach(section => observer.observe(section));
+		  
+		  // Inicializa en el primer enlace visible
+		  const initialLink = navLinks[0];
+		  if (initialLink) updateIndicator(initialLink);
+		});
+	  </script>
+	  
+
+	  
+	  <script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita que recargue la página
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://formsubmit.co/eduardo@egallardo.cl", {
+      method: "POST",
+      body: formData,
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset(); // Limpia el formulario
+        document.getElementById('success-message').style.display = 'block'; // Muestra el mensaje
+      } else {
+        alert("Ocurrió un problema al enviar el mensaje. Intenta más tarde.");
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      alert("Error al conectar con el servidor.");
+    });
+  });
+</script>
+
+
+
+</body>
+
+
+</html>
